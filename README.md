@@ -2,6 +2,8 @@
 [![Actions Status](https://github.com/jcastiblancoc/python-project-174/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/jcastiblancoc/python-project-174/actions)
 
 
+[![Code Coverage](https://qlty.sh/gh/jcastiblancoc/projects/python-project-174/coverage.svg)](https://qlty.sh/gh/jcastiblancoc/projects/python-project-174)
+
 # Calculadora de Diferencias (gendiff)
 
 [![asciicast](https://asciinema.org/a/30107266-8473-4cd3-a558-f0cac6e61533.svg)](https://asciinema.org/connect/30107266-8473-4cd3-a558-f0cac6e61533)
@@ -57,3 +59,5 @@ Salida esperada:
   + timeout: 20
   + verbose: true
 }
+
+

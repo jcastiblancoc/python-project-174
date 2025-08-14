@@ -20,3 +20,13 @@ packages = [
 ]
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.12.8"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F"]
+
+
