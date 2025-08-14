@@ -2,12 +2,21 @@ from gendiff import generate_diff
 from pathlib import Path
 
 def read_fixture(filename):
+    """Devuelve la ruta completa a un archivo de fixtures"""
     return Path(__file__).parent / "fixtures" / filename
 
-def test_generate_diff():
-    file1 = read_fixture("file1.json")
-    file2 = read_fixture("file2.json")
-    expected_output = Path(read_fixture("expected.txt")).read_text().strip()
+def test_generate_diff_json():
+    file1 = str(read_fixture("file1.json"))
+    file2 = str(read_fixture("file2.json"))
+    expected_output = read_fixture("expected.txt").read_text().strip()
+
+    diff = generate_diff(file1, file2)
+    assert diff.strip() == expected_output
+
+def test_generate_diff_yaml():
+    file1 = str(read_fixture("file1.yml"))
+    file2 = str(read_fixture("file2.yml"))
+    expected_output = read_fixture("expected_yaml.txt").read_text().strip()
 
     diff = generate_diff(file1, file2)
     assert diff.strip() == expected_output
