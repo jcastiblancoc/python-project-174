@@ -18,3 +18,5 @@ build-backend = "poetry.core.masonry.api"
 packages = [
     { include = "gendiff" }
 ]
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
