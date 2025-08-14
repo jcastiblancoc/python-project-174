@@ -24,11 +24,15 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
+      - name: Install coverage tools
+        run: poetry add --dev coverage coverage-lcov
+
       - name: Run linter
         run: poetry run ruff check .
 
       - name: Run tests with coverage
         run: |
+          mkdir -p reports
           poetry run coverage run -m pytest --maxfail=1 --disable-warnings -q
           poetry run coverage lcov -o reports/lcov.info
 
