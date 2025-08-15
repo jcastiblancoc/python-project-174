@@ -29,7 +29,10 @@ def to_str(value, depth):
         inner_indent_size = depth * 4 + 4
         inner_indent = ' ' * inner_indent_size
         closing_indent = ' ' * (depth * 4)
-        lines = [f"{inner_indent}{k}: {to_str(v, depth + 1)}" for k, v in value.items()]
+        lines = [
+            f"{inner_indent}{k}: {to_str(v, depth + 1)}"
+            for k, v in value.items()
+        ]
         return "{\n" + "\n".join(lines) + "\n" + closing_indent + "}"
 
     if isinstance(value, bool):

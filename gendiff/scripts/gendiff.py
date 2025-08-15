@@ -2,6 +2,7 @@
 import argparse
 from gendiff import generate_diff
 
+
 def main():
     parser = argparse.ArgumentParser(
         description="Compares two files and shows the difference."
@@ -19,6 +20,7 @@ def main():
 
     diff = generate_diff(args.first_file, args.second_file, args.format_name)
     print(diff)
+
 
 if __name__ == "__main__":
     main()

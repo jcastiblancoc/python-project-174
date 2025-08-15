@@ -4,6 +4,7 @@ from .formatters.stylish import stylish
 from .formatters.plain import plain
 from .formatters.json import format_json
 
+ 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
     dict1 = load_file(file_path1)
     dict2 = load_file(file_path2)

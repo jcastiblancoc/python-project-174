@@ -3,6 +3,7 @@ import json
 import yaml
 from pathlib import Path
 
+
 def load_file(filepath):
     path = Path(filepath)
     ext = path.suffix.lower()
