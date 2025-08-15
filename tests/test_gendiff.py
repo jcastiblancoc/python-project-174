@@ -1,6 +1,7 @@
 from gendiff import generate_diff
 from pathlib import Path
 
+
 def read_fixture(filename):
     """Devuelve la ruta completa a un archivo de fixtures"""
     return Path(__file__).parent / "fixtures" / filename
