@@ -50,3 +50,17 @@ def test_generate_diff_plain_yaml():
     expected_output = read_fixture("expected_plain.txt").read_text().strip()
     diff = generate_diff(file1, file2, 'plain')
     assert diff.strip() == expected_output
+
+def test_generate_diff_json_format_with_nested_json():
+    file1 = str(read_fixture("file1_nested.json"))
+    file2 = str(read_fixture("file2_nested.json"))
+    expected_output = read_fixture("expected_json.txt").read_text().strip()
+    diff = generate_diff(file1, file2, 'json')
+    assert diff.strip() == expected_output
+
+def test_generate_diff_json_format_with_nested_yaml():
+    file1 = str(read_fixture("file1_nested.yml"))
+    file2 = str(read_fixture("file2_nested.yml"))
+    expected_output = read_fixture("expected_json.txt").read_text().strip()
+    diff = generate_diff(file1, file2, 'json')
+    assert diff.strip() == expected_output
