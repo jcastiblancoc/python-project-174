@@ -1,6 +1,7 @@
 from .parser import load_file
 from .diff_builder import build_diff
 from .formatters.stylish import stylish
+from .formatters.plain import plain
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
     dict1 = load_file(file_path1)
@@ -9,4 +10,6 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
 
     if format_name == 'stylish':
         return stylish(diff)
+    if format_name == 'plain':
+        return plain(diff)
     raise ValueError(f"Unknown format: {format_name}")

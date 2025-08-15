@@ -8,6 +8,8 @@
 
 [![asciicast](https://asciinema.org/a/30107266-8473-4cd3-a558-f0cac6e61533.svg)](https://asciinema.org/connect/30107266-8473-4cd3-a558-f0cac6e61533)
 
+[![asciicast](https://asciinema.org/a/nicEi6faISiV7nqi1HJiqkqcX.svg)](https://asciinema.org/a/nicEi6faISiV7nqi1HJiqkqcX)
+
 Herramienta en línea de comandos y librería de Python para comparar archivos JSON y mostrar sus diferencias de forma clara y ordenada.
 
 ## Instalación
