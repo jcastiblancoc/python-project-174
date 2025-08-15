@@ -1,5 +1,8 @@
 from .parser import load_file
 from pathlib import Path
+from .parser import load_file
+from .diff_builder import build_diff
+from .formatters.stylish import stylish
 
 def format_value(value, is_yaml=False):
     """Convierte valores a la representación esperada en el diff"""
@@ -28,3 +31,15 @@ def generate_diff(file1, file2):
             result.append(f"    {key}: {format_value(data1[key], is_yaml)}")
 
     return "{\n" + "\n".join(result) + "\n}"
+
+
+
+def generate_diff(file_path1, file_path2, format_name='stylish'):
+    dict1 = load_file(file_path1)
+    dict2 = load_file(file_path2)
+    diff = build_diff(dict1, dict2)
+
+    if format_name == 'stylish':
+        return stylish(diff)
+    raise ValueError(f"Unknown format: {format_name}")
+
